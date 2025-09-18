@@ -10,17 +10,33 @@ function showDetails(product) {
 let currentSlide = 0;
 let slides = [];
 let indicators = [];
+let lastSlide = null;
 
 function showSlide(n) {
   if (!slides.length) return;
+  lastSlide = currentSlide;
   currentSlide = n;
   slides.forEach((slide, i) => {
-    slide.style.display = i === n ? 'block' : 'none';
-    slide.style.opacity = i === n ? '1' : '0';
+    slide.classList.remove('active', 'prev');
+    if (i === n) {
+      slide.classList.add('active');
+      slide.style.display = 'block';
+    } else if (i === lastSlide) {
+      slide.classList.add('prev');
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
   });
   indicators.forEach((ind, i) => {
     ind.classList.toggle('active', i === n);
   });
+  // Hide previous slide after animation
+  if (lastSlide !== currentSlide) {
+    setTimeout(() => {
+      if (slides[lastSlide]) slides[lastSlide].style.display = 'none';
+    }, 700);
+  }
 }
 
 function nextSlide() {
@@ -34,6 +50,9 @@ function prevSlide() {
 document.addEventListener('DOMContentLoaded', () => {
   slides = document.querySelectorAll('.cover-img.slide');
   indicators = document.querySelectorAll('.indicator');
+  slides.forEach((slide, i) => {
+    slide.style.display = i === 0 ? 'block' : 'none';
+  });
   showSlide(0);
   setInterval(() => {
     nextSlide();
