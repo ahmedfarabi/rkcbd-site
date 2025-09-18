@@ -5,51 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RK Cables - About Us</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <style>
+    body {background: linear-gradient(135deg, #f8fafc 0%, #fbeaea 100%);min-height: 100vh;}
+    .main-content {max-width: 1200px;margin: 0 auto;padding: 0 1rem;}
+    section {background: #fff;border-radius: 18px;box-shadow: 0 4px 24px rgba(0,0,0,0.07);margin-bottom: 2.5rem;padding: 2.5rem 2rem;transition: box-shadow 0.2s;}
+    section:hover {box-shadow: 0 8px 32px rgba(0,0,0,0.12);}
+    h1, h2, h3 {font-family: 'Montserrat', Arial, sans-serif;font-weight: 700;letter-spacing: 1px;}
+    h1 {font-size: 2.8rem;color: #b80000;margin-bottom: 0.5rem;}
+    h2 {font-size: 2rem;color: #222;margin-bottom: 1.2rem;border-left: 6px solid #b80000;padding-left: 0.7rem;}
+    h3 {font-size: 1.3rem;color: #b80000;margin-bottom: 0.7rem;}
+    nav ul {display: flex;gap: 1.5rem;padding: 0;margin: 0;list-style: none;}
+    nav li {position: relative;display: flex;align-items: center;font-size: 1.08rem;font-weight: 500;color: #222;transition: color 0.2s;}
+    nav a {color: #222;text-decoration: none;display: flex;align-items: center;gap: 0.5rem;padding: 0.3rem 0.7rem;border-radius: 6px;transition: background 0.2s, color 0.2s;position: relative;overflow: hidden;}
+    nav a:hover, nav a.active {background: #b80000;color: #fff;}
+    nav a::before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;height: 3px;background: linear-gradient(90deg, #b80000 60%, #222 100%);transform: scaleX(0);transition: transform 0.3s cubic-bezier(.4,0,.2,1);}
+    nav a:hover::before, nav a.active::before {transform: scaleX(1);}
+    nav a .menu-icon {font-size: 1.2em;vertical-align: middle;transition: transform 0.2s;}
+    nav a:hover .menu-icon {transform: scale(1.2) rotate(-10deg);}
+    .footer-content {border-radius: 0 0 18px 18px;box-shadow: 0 -2px 12px rgba(0,0,0,0.04);}
+    .footer-logo {color: #b80000;}
+    @media (max-width: 900px) {.main-content, section {padding: 1rem;}}
+    @media (max-width: 600px) {h1 {font-size: 2rem;}h2 {font-size: 1.3rem;}.cover-content {padding: 0.7rem 0.7rem;}section {padding: 1rem 0.5rem;}}
+  </style>
 </head>
 <body>
-  
 <header>
-  <div class="logo">RK Cables</div>
+  <div class="logo">
+    <img src="images/logo.png" alt="RK Cables Logo" style="height:48px;vertical-align:middle;margin-right:12px;">
+    RK Cables
+  </div>
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html"><span class="menu-icon">🏠</span> Home</a></li>
+      <li><a href="products.html"><span class="menu-icon">🧰</span> Products</a></li>
+      <li><a href="about.html"><span class="menu-icon">📖</span> About</a></li>
+      <li><a href="contact.html"><span class="menu-icon">☎️</span> Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<footer>
-  <p>RK Cables &copy; 2025 | All Rights Reserved</p>
-  <p>Head Office: 123 Industrial Road, Dhaka</p>
-  <p>Email: info@rkcables.com | Phone: +880-1234-567890</p>
-</footer>
 
-  <section class="about">
-    <h2>About RK Cables</h2>
-    <p>Founded in 2000, RK Cables has grown to be one of the leading cable manufacturers in Bangladesh. 
-       With a commitment to quality and innovation, we supply a wide range of electrical and communication cables 
-       to both domestic and international markets.</p>
-    <p>Our journey started with a small plant, and today we operate multiple factories with state-of-the-art technology.</p>
-  </section>
-  
-<header>
-  <div class="logo">RK Cables</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <div class="main-content">
+    <section class="about">
+      <h2>About RK Cables</h2>
+      <p>Founded in 2000, RK Cables has grown to be one of the leading cable manufacturers in Bangladesh. With a commitment to quality and innovation, we supply a wide range of electrical and communication cables to both domestic and international markets.</p>
+      <p>Our journey started with a small plant, and today we operate multiple factories with state-of-the-art technology.</p>
+      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:2rem;">
+        <div>
+          <h3>Our Mission</h3>
+          <p>To deliver reliable and safe cable solutions that empower industries and homes.</p>
+        </div>
+        <div>
+          <h3>Our Vision</h3>
+          <p>To be the most preferred cable brand in Bangladesh and beyond.</p>
+        </div>
+        <div>
+          <h3>Our Values</h3>
+          <ul style="padding-left:1.2rem;">
+            <li>Quality</li>
+            <li>Innovation</li>
+            <li>Customer Satisfaction</li>
+            <li>Integrity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="leadership">
+      <h2>Message from Leadership</h2>
+      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;align-items:center;">
+        <div style="text-align:center;">
+          <img src="images/persons/chairman.jpeg" alt="Chairman" style="width:120px;height:120px;object-fit:cover;border-radius:50%;border:3px solid #b80000;margin-bottom:1rem;">
+          <h3>Chairman</h3>
+          <p>"We believe in quality and innovation to drive progress for our customers and the nation."</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="images/persons/MD.jpeg" alt="Managing Director" style="width:120px;height:120px;object-fit:cover;border-radius:50%;border:3px solid #b80000;margin-bottom:1rem;">
+          <h3>Managing Director</h3>
+          <p>"Our mission is to deliver safe, reliable cables that empower industries and homes across Bangladesh."</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-<footer>
-  <p>RK Cables &copy; 2025 | All Rights Reserved</p>
-  <p>Head Office: 123 Industrial Road, Dhaka</p>
-  <p>Email: info@rkcables.com | Phone: +880-1234-567890</p>
+  <footer>
+  <div class="footer-content">
+    <div class="footer-logo">RK Cables</div>
+    <div class="footer-info">
+      <p><strong>Head Office:</strong> 123 Industrial Road, Dhaka</p>
+      <p><strong>Email:</strong> info@rkcables.com</p>
+      <p><strong>Phone:</strong> +880-1234-567890</p>
+    </div>
+    <div class="footer-social">
+      <a href="#" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"/></a>
+      <a href="#" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"/></a>
+      <a href="#" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"/></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>RK Cables &copy; 2025 | All Rights Reserved</p>
+  </div>
 </footer>
 
 </body>
