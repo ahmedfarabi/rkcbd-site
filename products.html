@@ -39,10 +39,18 @@
   </div>
   <nav>
     <ul>
-      <li><a href="index.html"><span class="menu-icon">🏠</span> Home</a></li>
-      <li><a href="products.html"><span class="menu-icon">🧰</span> Products</a></li>
-      <li><a href="about.html"><span class="menu-icon">📖</span> About</a></li>
-      <li><a href="contact.html"><span class="menu-icon">☎️</span> Contact</a></li>
+      <li><a href="index.html"><span class="menu-icon" aria-label="Home">
+        <svg width="26" height="26" viewBox="0 0 20 20" fill="none" shape-rendering="geometricPrecision" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M2 10L10 3L18 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="5" y="10" width="10" height="7" rx="2" stroke="currentColor" stroke-width="2.2"/></svg>
+      </span> Home</a></li>
+      <li><a href="products.html"><span class="menu-icon" aria-label="Products">
+        <svg width="26" height="26" viewBox="0 0 20 20" fill="none" shape-rendering="geometricPrecision" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><rect x="3" y="6" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2.2"/><rect x="7" y="2" width="6" height="4" rx="1" stroke="currentColor" stroke-width="2.2"/></svg>
+      </span> Products</a></li>
+      <li><a href="about.html"><span class="menu-icon" aria-label="About">
+        <svg width="26" height="26" viewBox="0 0 20 20" fill="none" shape-rendering="geometricPrecision" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="2.2"/><rect x="5" y="12" width="10" height="5" rx="2" stroke="currentColor" stroke-width="2.2"/></svg>
+      </span> About</a></li>
+      <li><a href="contact.html"><span class="menu-icon" aria-label="Contact">
+        <svg width="26" height="26" viewBox="0 0 20 20" fill="none" shape-rendering="geometricPrecision" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><rect x="3" y="5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M3 5L10 11L17 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span> Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -54,48 +62,269 @@
       <h2>Our Product Range</h2>
       <div class="products-list">
         <div class="product-item">
-          <img src="images/products/dmstic.jpeg" alt="Domestic cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/dmstic.jpeg" alt="Domestic cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>Domestic Cables</h3>
           <p>Safe and efficient wiring for homes and apartments.</p>
+          <button class="details-btn" onclick="showProductDetails('Domestic Cables', 'Safe and efficient wiring for homes and apartments.', 'images/products/dmstic.jpeg')">See Details</button>
         </div>
         <div class="product-item">
-          <img src="images/products/pow c.jpeg" alt="Power cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/pow c.jpeg" alt="Power cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>Power Cables</h3>
           <p>High-capacity cables for industrial power transmission.</p>
+          <button class="details-btn" onclick="showProductDetails('Power Cables', 'High-capacity cables for industrial power transmission.', 'images/products/pow c.jpeg')">See Details</button>
         </div>
         <div class="product-item">
-          <img src="images/products/Control.jpeg" alt="Control cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/Control.jpeg" alt="Control cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>Control Cables</h3>
           <p>Reliable cables for automation and control systems.</p>
+          <button class="details-btn" onclick="showProductDetails('Control Cables', 'Reliable cables for automation and control systems.', 'images/products/Control.jpeg')">See Details</button>
         </div>
         <div class="product-item">
-          <img src="images/products/Overhead.jpeg" alt="Overhead related cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/Overhead.jpeg" alt="Overhead related cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>Overhead Related Cables</h3>
           <p>Durable cables for overhead power distribution.</p>
+          <button class="details-btn" onclick="showProductDetails('Overhead Related Cables', 'Durable cables for overhead power distribution.', 'images/products/Overhead.jpeg')">See Details</button>
         </div>
         <div class="product-item">
-          <img src="images/products/Sub.jpeg" alt="Submersible cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/Sub.jpeg" alt="Submersible cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>Submersible Cables</h3>
           <p>Waterproof cables for pumps and underwater equipment.</p>
+          <button class="details-btn" onclick="showProductDetails('Submersible Cables', 'Waterproof cables for pumps and underwater equipment.', 'images/products/Sub.jpeg')">See Details</button>
         </div>
         <div class="product-item">
-          <img src="images/products/commu.jpg" alt="Communication cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/commu.jpg" alt="Communication cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>Communication Cables</h3>
           <p>For high-speed data and voice transmission.</p>
+          <button class="details-btn" onclick="showProductDetails('Communication Cables', 'For high-speed data and voice transmission.', 'images/products/commu.jpg')">See Details</button>
         </div>
         <div class="product-item">
-          <img src="images/products/dc c.jpeg" alt="DC cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/dc c.jpeg" alt="DC cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>DC Cables</h3>
           <p>Efficient cables for direct current applications.</p>
+          <button class="details-btn" onclick="showProductDetails('DC Cables', 'Efficient cables for direct current applications.', 'images/products/dc c.jpeg')">See Details</button>
         </div>
         <div class="product-item">
-          <img src="images/products/custom.jpeg" alt="Special customized cables" style="width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:1rem;border:2px solid #b80000;">
+          <img src="images/products/custom.jpeg" alt="Special customized cables" style="width:140px;height:140px;object-fit:cover;border-radius:12px;margin-bottom:1rem;border:2px solid #b80000;">
           <h3>Special Customized Cables</h3>
           <p>Tailored cables for unique and specialized needs.</p>
+          <button class="details-btn" onclick="showProductDetails('Special Customized Cables', 'Tailored cables for unique and specialized needs.', 'images/products/custom.jpeg')">See Details</button>
         </div>
       </div>
       <div id="product-details"></div>
     </section>
+    <div id="details-popup" class="details-popup" style="display:none;">
+      <div class="details-panel" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeProductDetails()">&times;</button>
+        <img id="details-img" src="" alt="Product" style="width:180px;height:180px;object-fit:cover;border-radius:16px;margin-bottom:1rem;">
+        <h3 id="details-title"></h3>
+        <p id="details-desc"></p>
+      </div>
+    </div>
+    <script>
+      // Attach click listener immediately after popup HTML
+      var popup = document.getElementById('details-popup');
+      if (popup) {
+        popup.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeProductDetails();
+          }
+        });
+      }
+    </script>
+    <style>
+      .details-popup {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.45);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .details-panel {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        padding: 2rem 2.5rem;
+        width: 480px;
+        max-width: 95vw;
+        min-height: 340px;
+        max-height: 90vh;
+        text-align: center;
+        position: relative;
+        animation: slideUp 0.4s cubic-bezier(.4,0,.2,1);
+        overflow-y: auto;
+      }
+      @keyframes slideUp {
+        from {transform: translateY(60px);opacity:0;}
+        to {transform: translateY(0);opacity:1;}
+      }
+      .close-btn {
+        position: absolute;
+        top: 18px; right: 18px;
+        background: #b80000;
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        width: 36px; height: 36px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+      .details-btn {
+        background: #b80000;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1.2rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: background 0.2s;
+      }
+      .details-btn:hover {
+        background: #222;
+      }
+    </style>
+    <script>
+        // Custom details for Overhead Related Cables
+        if (title === 'Overhead Related Cables') {
+          desc = `RK Overhead Conductors – Connecting Communities, Powering Progress<br><br>
+          Electricity is the lifeline of development — and RK Cables is proud to play a key role in lighting up Bangladesh. Our high-quality Overhead Conductors are specially manufactured to serve urban and rural communities, ensuring safe, efficient, and reliable power transmission.<br><br>
+          We use premium-grade aluminum conductors and virgin PVC components to guarantee long-lasting performance and top-tier safety.<br><br>
+          <strong>Why Choose RK Overhead Conductors?</strong><br>
+          <ul style='text-align:left;'>
+            <li>High-conductivity aluminum wires for stable energy flow</li>
+            <li>Durable, weather-resistant build for outdoor overhead use</li>
+            <li>Manufactured with virgin PVC materials for extra protection</li>
+            <li>Ensures safe and strong connections across distances</li>
+            <li>Supports national efforts to enlighten every home and village</li>
+          </ul>
+          From city streets to remote villages, RK Overhead Conductors are helping power dreams and drive development.<br><br>
+          <strong>RK Cables – Connected with Trust, It’s a Nationwide Connection.</strong>`;
+        }
+        // Custom details for Special Customized Cables
+        if (title === 'Special Customized Cables') {
+          desc = `RK Customized Cables – Tailored Power Solutions, Built for Your Needs<br><br>
+          Every project is unique — and so are your cable requirements. That’s why RK Cables offers Special Customized Cables, specially designed to meet the specific needs of users, suppliers, and businesses.<br><br>
+          From NYY Type Power Cables to other specialized variants, we customize as per your technical specifications and application demands, while strictly maintaining our premium quality standards.<br><br>
+          <strong>Why Choose RK Customized Cables?</strong><br>
+          <ul style='text-align:left;'>
+            <li>Customized to meet project-specific needs</li>
+            <li>Available in various sizes, cores, insulation types, and lengths</li>
+            <li>Ensured copper purity and high conductivity</li>
+            <li>Strict quality control for safe and long-lasting performance</li>
+            <li>Ideal for industrial, commercial, and government projects</li>
+          </ul>
+          At RK Cables, we turn your requirements into reliable solutions — with quality you can trust.<br><br>
+          <strong>RK Cables – Your Demand, Our Commitment. Connected with Trust.</strong>`;
+        }
+        // Custom details for DC Cables
+        if (title === 'DC Cables') {
+          desc = `Powering the Future with RK DC Cables – Safe, Strong, and Solar-Ready.<br><br>
+          As Bangladesh moves toward a cleaner, greener future, solar energy is lighting up even the most remote corners of the country. At RK Cables, we provide high-quality DC Cables specially designed for solar systems — ensuring safe, reliable, and long-lasting connections.<br><br>
+          <strong>Why RK DC Cables?</strong><br>
+          <ul style='text-align:left;'>
+            <li>Built to handle solar energy transmission with minimal loss</li>
+            <li>Designed for safe connections in rural and urban solar installations</li>
+            <li>Resistant to heat, UV, and harsh environments</li>
+            <li>Solves connectivity challenges in off-grid and remote areas</li>
+            <li>Supports the national goal to reduce electricity congestion and promote clean energy</li>
+          </ul>
+          From rooftops to rural homes, RK DC Cables are helping enlighten all of Bangladesh with sustainable power.<br><br>
+          <strong>RK Cables – Lighting the Nation with Solar Connection & Safety.</strong>`;
+        }
+        // Custom details for Communication Cables
+        if (title === 'Communication Cables') {
+          desc = `RK Communication Cables – Clear Signals, Strong Connections<br><br>
+          In today’s connected world, clear communication and reliable control are essential. RK Cables manufactures high-quality Communication Cables designed to ensure seamless data transfer and secure connections for a wide range of electronic devices and control systems.<br><br>
+          <strong>Why RK Communication Cables?</strong><br>
+          <ul style='text-align:left;'>
+            <li>Engineered for stable signal transmission</li>
+            <li>Ideal for control panels, electronics, telecom, and automation systems</li>
+            <li>Reduces interference for clean, uninterrupted communication</li>
+            <li>Manufactured with high-quality copper and durable insulation</li>
+            <li>Ensures long-lasting, safe connectivity across all environments</li>
+          </ul>
+          From industrial automation to everyday electronics — RK Communication Cables keep your world connected.<br><br>
+          <strong>RK Cables – Connected with Trust, It's Reliable Communication.</strong>`;
+        }
+
+
+      function showProductDetails(title, desc, img) {
+        // Custom details for Domestic Cables
+        if (title === 'Domestic Cables') {
+          desc = `Are you looking for a safe, reliable, and high-performance electrical wiring solution? Discover the growing demand for BYA FR (Flame Retardant) Type Electric Cables — specially designed to reduce fire hazards and ensure long-term durability.<br><br>
+          Whether you're a homeowner, an electrical contractor, a supplier, or a business owner in construction or manufacturing, BYA FR cables offer the safety and efficiency your project needs.<br><br>
+          <strong>Why BYA FR Cables?</strong><br>
+          <ul style='text-align:left;'>
+            <li>Flame retardant insulation for enhanced fire safety</li>
+            <li>Ideal for residential, commercial, and industrial wiring</li>
+            <li>High resistance to heat, chemicals, and mechanical stress</li>
+            <li>Increasing demand in real estate, infrastructure, and energy sectors</li>
+            <li>Trusted by top builders and government projects</li>
+          </ul>
+          As demand rises for safer electrical systems, now is the time for suppliers and businesses to stock and promote BYA FR cables. Stay ahead of market trends, meet regulatory standards, and offer your clients a trusted solution.<br><br>
+          <strong>Get connected with BYA FR cables – where safety meets performance.</strong>`;
+        }
+        // Custom details for Power Cables
+        if (title === 'Power Cables') {
+          desc = `Power Up with Confidence – Choose NYY Cables from RK Cables<br><br>
+          Looking for a reliable solution for mills, factories, heavy industries, or government projects? Our NYY Type Electric Power Cables are built for high-performance, long-term use in demanding environments.<br><br>
+          At RK Cables, we don’t just deliver cables — we deliver trust.<br><br>
+          <strong>Why Choose RK NYY Cables?</strong><br>
+          <ul style='text-align:left;'>
+            <li>100% Pure Copper for maximum conductivity</li>
+            <li>Assured copper quality and purity</li>
+            <li>Strong insulation for safe and durable connections</li>
+            <li>Ideal for underground installations, power networks, and heavy-load areas</li>
+            <li>Compliant with government and industrial safety standards</li>
+          </ul>
+          From energy plants to factories, trust the name that stands for Reliability & Knowledge — RK Cables.<br><br>
+          <strong>Quality that connects. Power that protects.</strong>`;
+        }
+        // Custom details for Control Cables
+        if (title === 'Control Cables') {
+          desc = `RK Control Cables – Precision, Safety, and Performance You Can Trust<br><br>
+          When it comes to controlling machines, systems, and automation, reliable connectivity is critical. RK Cables manufactures high-quality FR Type Multicore Control Cables designed to ensure accurate signal transmission and safe machinery control.<br><br>
+          Our control cables are built for industrial environments, offering superior performance where it matters most.<br><br>
+          <strong>Why Choose RK Control Cables?</strong><br>
+          <ul style='text-align:left;'>
+            <li>Flame Retardant (FR) insulation for enhanced safety</li>
+            <li>Multicore design for organized and efficient wiring</li>
+            <li>Ensures accurate control and monitoring of electrical equipment</li>
+            <li>Ideal for machinery, automation, and control panels</li>
+            <li>Delivers stable connectivity even under tough conditions</li>
+          </ul>
+          At RK Cables, we deliver more than trust — we deliver control with confidence.<br><br>
+          <strong>RK Cables – Engineered for Safety. Designed for Control.</strong>`;
+        }
+        // Custom details for Submersible Cables
+        if (title === 'Submersible Cables') {
+          desc = `RK Submersible Cables - Powering Irrigation, Securing Water Supply<br><br>
+          In agriculture and irrigation, a strong, water-safe connection is everything. That's why RK Cables proudly offers FR Type Submersible Cables, specially designed for submersible motor installations.<br><br>
+          Whether it's for deep tube wells, irrigation schemes, or rural water supply systems - RK Submersible Cables ensure safe, durable, and efficient performance even in wet and submerged conditions.<br><br>
+          <strong>Why Choose RK Submersible Cables?</strong><br>
+          <ul style='text-align:left;'>
+            <li>Flame Retardant (FR) insulation for extra safety</li>
+            <li>High-quality copper for better conductivity and durability</li>
+            <li>Specially built for deep water motor applications</li>
+            <li>Supports the expansion of irrigation infrastructure and agriculture growth</li>
+            <li>Ensures continuous water supply with reliable submersible motor operation</li>
+          </ul>
+          From the ground to the field - RK Cables keeps your water flowing and your crops growing.<br><br>
+          <strong>RK Cables - Strong Connections for a Greener Future.</strong>`;
+        }
+        document.getElementById('details-title').textContent = title;
+        document.getElementById('details-desc').innerHTML = desc;
+        document.getElementById('details-img').src = img;
+        document.getElementById('details-popup').style.display = 'flex';
+      }
+      function closeProductDetails() {
+        document.getElementById('details-popup').style.display = 'none';
+      }
+    </script>
   </div>
   
 <footer>

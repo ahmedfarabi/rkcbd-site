@@ -57,4 +57,48 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     nextSlide();
   }, 4000);
+
+  // Gallery slider drag logic
+  const gallerySlider = document.getElementById('gallerySlider');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  if (gallerySlider) {
+    gallerySlider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      gallerySlider.classList.add('dragging');
+      startX = e.pageX - gallerySlider.offsetLeft;
+      scrollLeft = gallerySlider.scrollLeft;
+    });
+    gallerySlider.addEventListener('mouseleave', () => {
+      isDown = false;
+      gallerySlider.classList.remove('dragging');
+    });
+    gallerySlider.addEventListener('mouseup', () => {
+      isDown = false;
+      gallerySlider.classList.remove('dragging');
+    });
+    gallerySlider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - gallerySlider.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      gallerySlider.scrollLeft = scrollLeft - walk;
+    });
+    // Touch events for mobile
+    gallerySlider.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - gallerySlider.offsetLeft;
+      scrollLeft = gallerySlider.scrollLeft;
+    });
+    gallerySlider.addEventListener('touchend', () => {
+      isDown = false;
+    });
+    gallerySlider.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX - gallerySlider.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      gallerySlider.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
