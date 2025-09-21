@@ -1,3 +1,42 @@
+// Sidebar close button logic
+document.addEventListener('DOMContentLoaded', function() {
+  var closeSidebar = document.getElementById('closeSidebar');
+  var sidebarMenu = document.getElementById('sidebarMenu');
+  var sidebarOverlay = document.getElementById('sidebarOverlay');
+  if (closeSidebar && sidebarMenu && sidebarOverlay) {
+    closeSidebar.addEventListener('click', function() {
+      sidebarMenu.style.transform = 'translateX(100%)';
+      setTimeout(function() { sidebarMenu.style.display = 'none'; }, 300);
+      sidebarOverlay.style.display = 'none';
+    });
+  }
+});
+// Sidebar menu toggle logic
+document.addEventListener('DOMContentLoaded', function() {
+  var menuToggle = document.getElementById('menuToggle');
+  var sidebarMenu = document.getElementById('sidebarMenu');
+  var sidebarOverlay = document.getElementById('sidebarOverlay');
+  if (menuToggle && sidebarMenu && sidebarOverlay) {
+    menuToggle.addEventListener('click', function() {
+      sidebarMenu.style.transform = 'translateX(0)';
+      sidebarMenu.style.display = 'block';
+      sidebarOverlay.style.display = 'block';
+    });
+    sidebarOverlay.addEventListener('click', function() {
+      sidebarMenu.style.transform = 'translateX(100%)';
+      setTimeout(function() { sidebarMenu.style.display = 'none'; }, 300);
+      sidebarOverlay.style.display = 'none';
+    });
+    // Close sidebar on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        sidebarMenu.style.transform = 'translateX(100%)';
+        setTimeout(function() { sidebarMenu.style.display = 'none'; }, 300);
+        sidebarOverlay.style.display = 'none';
+      }
+    });
+  }
+});
 
 
 function showDetails(product) {
