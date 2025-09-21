@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>RK Cables - Home</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
@@ -11,7 +11,7 @@
   
   <header>
   <div class="logo">
-    <img src="images/logo.jpg" alt="RK Cables Logo" style="height:48px;vertical-align:middle;margin-right:12px;">
+    <img src="images/logo 3.jpeg" alt="RK Cables Logo" style="height:48px;vertical-align:middle;margin-right:12px;">
     RK Cables Industries Ltd
   </div>
   <nav>
@@ -34,13 +34,61 @@
 
   <div class="main-content">
   <section class="cover">
+    <style>
+      .cover-slideshow {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 420px;
+        overflow: hidden;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+        background: #222;
+      }
+      .cover-slideshow .cover-img {
+        position: absolute;
+        top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+        border-radius: 18px;
+        transition: opacity 0.4s;
+        background: #222;
+        display: block;
+      }
+      .cover-slideshow .slide {
+        opacity: 0;
+        z-index: 1;
+      }
+      .cover-slideshow .slide[style*="display:block"] {
+        opacity: 1;
+        z-index: 2;
+      }
+      @media (max-width: 900px) {
+        .cover-slideshow {height: 260px;}
+      }
+      @media (max-width: 600px) {
+        .cover-slideshow {height: 140px;}
+      }
+      @media (max-width: 600px) {
+        .cover-content h1 {font-size: 1.2rem;}
+        .cover-content p {font-size: 0.95rem;}
+      }
+      @media (max-width: 900px) {
+        .cover-slideshow {height: 260px;}
+      }
+      @media (max-width: 600px) {
+        .cover-slideshow {height: 140px;}
+      }
+    </style>
     <div class="cover-slideshow">
-      <img src="images/cover.jpg" alt="Cables Cover 1" class="cover-img slide" style="display:block;">
-      <img src="images/cover2.jpg" alt="Cables Cover 2" class="cover-img slide" style="display:none;">
-      <img src="images/cover3.jpg" alt="Cables Cover 3" class="cover-img slide" style="display:none;">
-      <img src="images/cover4.jpg" alt="Cables Cover 4" class="cover-img slide" style="display:none;">
-      <img src="images/cover5.jpg" alt="Cables Cover 5" class="cover-img slide" style="display:none;">
-      <img src="images/cover6.jpg" alt="Cables Cover 6" class="cover-img slide" style="display:none;">
+  <img src="images/cover1.png" alt="Cables Cover 1" class="cover-img slide" style="display:block;">
+  <img src="images/cover2.jpg" alt="Cables Cover 2" class="cover-img slide" style="display:none;">
+  <img src="images/cover3.jpg" alt="Cables Cover 3" class="cover-img slide" style="display:none;">
+  <img src="images/cover4.jpg" alt="Cables Cover 4" class="cover-img slide" style="display:none;">
+  <img src="images/cover5.jpg" alt="Cables Cover 5" class="cover-img slide" style="display:none;">
+  <img src="images/cover6.jpg" alt="Cables Cover 6" class="cover-img slide" style="display:none;">
       <button class="cover-arrow left" onclick="prevSlide()">&#10094;</button>
       <button class="cover-arrow right" onclick="nextSlide()">&#10095;</button>
       <div class="cover-indicators">
@@ -60,116 +108,159 @@
 
 
   <section class="products-preview">
-    <h2>Our Products</h2>
-    <div class="products-list">
-      <div class="product-item">
-        <h3>Domestic Use</h3>
+    <h2 style="font-size:1.3rem;margin-bottom:0.7rem;">Our Products</h2>
+    <div class="products-list" style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;">
+      <div class="product-item" style="min-width:220px;max-width:340px;flex:1 1 220px;">
+        <h3 style="font-size:1.1rem;">Domestic Use</h3>
         <div class="subcat-list">
-          <div class="subcat-item">
-            <img src="images/products/dmstic.jpeg" alt="Domestic cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/dmstic.jpeg" alt="Domestic cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>Domestic cables</span><br>
+              <span style="font-size:1rem;">Domestic cables</span><br>
               <small>For safe and efficient wiring in homes and apartments.</small>
             </div>
           </div>
         </div>
       </div>
-      <div class="product-item">
-        <h3>Industrial Use</h3>
+      <div class="product-item" style="min-width:220px;max-width:340px;flex:1 1 220px;">
+        <h3 style="font-size:1.1rem;">Industrial Use</h3>
         <div class="subcat-list">
-          <div class="subcat-item">
-            <img src="images/products/pow c.jpeg" alt="Power cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/pow c.jpeg" alt="Power cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>Power cables</span><br>
+              <span style="font-size:1rem;">Power cables</span><br>
               <small>High-capacity cables for industrial power transmission.</small>
             </div>
           </div>
-          <div class="subcat-item">
-            <img src="images/products/Control.jpeg" alt="Control cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/Control.jpeg" alt="Control cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>Control cables</span><br>
+              <span style="font-size:1rem;">Control cables</span><br>
               <small>Reliable cables for automation and control systems.</small>
             </div>
           </div>
-          <div class="subcat-item">
-            <img src="images/products/Overhead.jpeg" alt="Overhead related cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/Overhead.jpeg" alt="Overhead related cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>Overhead related cables</span><br>
+              <span style="font-size:1rem;">Overhead related cables</span><br>
               <small>Durable cables for overhead power distribution.</small>
             </div>
           </div>
         </div>
       </div>
-      <div class="product-item">
-        <h3>Special Purpose</h3>
+      <div class="product-item" style="min-width:220px;max-width:340px;flex:1 1 220px;">
+        <h3 style="font-size:1.1rem;">Special Purpose</h3>
         <div class="subcat-list">
-          <div class="subcat-item">
-            <img src="images/products/Sub.jpeg" alt="Submersible cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/Sub.jpeg" alt="Submersible cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>Submersible cables</span><br>
+              <span style="font-size:1rem;">Submersible cables</span><br>
               <small>Waterproof cables for pumps and underwater equipment.</small>
             </div>
           </div>
-          <div class="subcat-item">
-            <img src="images/products/commu.jpg" alt="Communication cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/commu.jpg" alt="Communication cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>Communication cables</span><br>
+              <span style="font-size:1rem;">Communication cables</span><br>
               <small>For high-speed data and voice transmission.</small>
             </div>
           </div>
-          <div class="subcat-item">
-            <img src="images/products/dc c.jpeg" alt="DC cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/dc c.jpeg" alt="DC cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>DC cables</span><br>
+              <span style="font-size:1rem;">DC cables</span><br>
               <small>Efficient cables for direct current applications.</small>
             </div>
           </div>
-          <div class="subcat-item">
-            <img src="images/products/custom.jpeg" alt="Special customized cables">
+          <div class="subcat-item" style="display:flex;align-items:center;gap:0.7rem;">
+            <img src="images/products/custom.jpeg" alt="Special customized cables" style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
             <div>
-              <span>Special customized cables</span><br>
+              <span style="font-size:1rem;">Special customized cables</span><br>
               <small>Tailored cables for unique and specialized needs.</small>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <style>
+      @media (max-width: 900px) {
+        .products-list {gap:1.2rem;}
+        .product-item {min-width:160px;max-width:220px;}
+        .subcat-item img {width:40px;height:40px;}
+        h2 {font-size:1.1rem;}
+      }
+      @media (max-width: 600px) {
+        .products-list {flex-direction:column;gap:0.7rem;}
+        .product-item {min-width:100px;max-width:100%;}
+        .subcat-item img {width:32px;height:32px;}
+        h2 {font-size:1rem;}
+        h3 {font-size:0.95rem;}
+        .subcat-item span {font-size:0.95rem;}
+      }
+    </style>
   </section>
 
 
   <section class="message">
-    <h2>Message from Chairman</h2>
-    <div class="message-card">
-      <img src="images/persons/chairman.jpeg" alt="Chairman" class="profile-img">
-      <div>
-        <p>As someone who has been deeply involved in the cable industry for many years, I’ve witnessed both the challenges and the tremendous potential within this vital sector. Throughout my career, I have gained valuable insights into what truly matters — not just high performance, but also safety, consistency, and trust. Driven by this understanding and fueled by a passion to contribute to national development, I founded RK Cables Industries Ltd. with a clear mission: to provide Bangladesh with cables that are uncompromising in quality, engineered for safety, and designed to stand the test of time. Our cables are crafted with pure copper, fire-retardant (FR) technology, and virgin PVC, ensuring superior conductivity, durability, and resistance to electrical hazards. But beyond the products, LRB stands for something greater. The name itself — Love, Respect &amp; Brotherhood — reflects our deep-rooted belief in building relationships, not just running a business. We aim to form strong bonds with our customers, partners, and employees through honesty, excellence, and shared growth. Whether it’s lighting up a rural home, powering a growing industry, or supporting the infrastructure of a bustling city, LRB Cables is here to empower lives. We envision a future where Bangladesh is not only electrified but elevated — with safety, quality, and human connection at its core.<br><br>
+    <h2 style="font-size:1.2rem;margin-bottom:0.7rem;">Message from Chairman</h2>
+    <div class="message-card" style="display:flex;align-items:flex-start;gap:1.5rem;padding:1.2rem 0.5rem;">
+  <img src="images/persons/chairman.jpeg" alt="Chairman" class="profile-img" style="width:150px;height:150px;object-fit:cover;border-radius:50%;border:4px solid #b80000;box-shadow:0 2px 12px rgba(229,57,53,0.12);flex-shrink:0;">
+      <div style="flex:1;">
+        <p style="font-size:1rem;line-height:1.6;">As someone who has been deeply involved in the cable industry for many years, I’ve witnessed both the challenges and the tremendous potential within this vital sector. Throughout my career, I have gained valuable insights into what truly matters — not just high performance, but also safety, consistency, and trust. Driven by this understanding and fueled by a passion to contribute to national development, I founded RK Cables Industries Ltd. with a clear mission: to provide Bangladesh with cables that are uncompromising in quality, engineered for safety, and designed to stand the test of time. Our cables are crafted with pure copper, fire-retardant (FR) technology, and virgin PVC, ensuring superior conductivity, durability, and resistance to electrical hazards. But beyond the products, RK stands for something greater. The name itself — Love, Respect &amp; Brotherhood — reflects our deep-rooted belief in building relationships, not just running a business. We aim to form strong bonds with our customers, partners, and employees through honesty, excellence, and shared growth. Whether it’s lighting up a rural home, powering a growing industry, or supporting the infrastructure of a bustling city, RK Cables is here to empower lives. We envision a future where Bangladesh is not only electrified but elevated — with safety, quality, and human connection at its core.<br><br>
         <strong>Md. Liton Ahmed</strong><br>
         Chairman,<br>
         RK Cables Industries Ltd.
         </p>
       </div>
     </div>
-    <h2>Message from MD</h2>
-    <div class="message-card">
-      <img src="images/persons/MD.jpeg" alt="MD" class="profile-img">
-      <div>
-        <h4>H.M. Rashidul Hoque</h4>
-        <p>With over 15 years of hands-on experience in the cable industry, I am proud to lead RK Cables Industries Ltd. on a new mission — to deliver world-class cables under the brand RK Cables. We understand the true needs of users, suppliers, and businessmen across Bangladesh.That’s why we are committed to providing high-quality cables that feature:<br><br>
+    <h2 style="font-size:1.2rem;margin-bottom:0.7rem;">Message from MD</h2>
+    <div class="message-card" style="display:flex;align-items:flex-start;gap:1.5rem;padding:1.2rem 0.5rem;">
+  <img src="images/persons/MD.jpeg" alt="MD" class="profile-img" style="width:150px;height:150px;object-fit:cover;border-radius:50%;border:4px solid #b80000;box-shadow:0 2px 12px rgba(229,57,53,0.12);flex-shrink:0;">
+      <div style="flex:1;">
+        <p style="font-size:1rem;line-height:1.6;">With over 15 years of hands-on experience in the cable industry, I am proud to lead RK Cables Industries Ltd. on a new mission — to deliver world-class cables under the brand RK Cables. We understand the true needs of users, suppliers, and businessmen across Bangladesh.That’s why we are committed to providing high-quality cables that feature:<br><br>
         1) Original copper with high purity and conductivity<br>
         2) Flame Retardant (FR) and virgin PVC components<br>
         3) Reliable performance and long-lasting durability<br><br>
-        At LRB, we don’t just manufacture cables — we build connections that power life, business, and industry safely and reliably. Our products are designed to prevent electrical accidents and ensure your safety, your family’s security, and your business continuity. We envision a future where Love, Respect &amp; Brotherhood connect not just cables, but people — bridging the gap between city and village, and lighting up every corner of Bangladesh. Join us in powering progress, building trust, and creating a brighter, safer tomorrow.<br><br>
+        At RK, we don’t just manufacture cables — we build connections that power life, business, and industry safely and reliably. Our products are designed to prevent electrical accidents and ensure your safety, your family’s security, and your business continuity. We envision a future where Love, Respect &amp; Brotherhood connect not just cables, but people — bridging the gap between city and village, and lighting up every corner of Bangladesh. Join us in powering progress, building trust, and creating a brighter, safer tomorrow.<br><br>
         <strong>H.M. Rashidul Hoque</strong><br>
         Managing Director,<br>
         RK Cables Industries Ltd.
         </p>
       </div>
     </div>
+    <style>
+      @media (max-width: 900px) {
+        .message-card {gap:1rem;padding:0.7rem 0.2rem;}
+  .message-card img {width:110px;height:110px;border-width:3px;border-color:#b80000;box-shadow:0 2px 12px rgba(229,57,53,0.12);}
+        h2 {font-size:1.05rem;}
+        p {font-size:0.95rem;}
+      }
+      @media (max-width: 600px) {
+        .message-card {flex-direction:column;align-items:center;gap:0.5rem;padding:0.4rem 0.1rem;text-align:center;}
+        .message-card img {width:70px;height:70px;border-width:2px;border-color:#b80000;box-shadow:0 2px 12px rgba(229,57,53,0.12);display:block;margin:0 auto;}
+        h2 {font-size:0.95rem;}
+        p {font-size:0.9rem;}
+      }
+    </style>
+    <style>
+      @media (max-width: 900px) {
+        .message-card {padding:0.7rem 0.2rem;}
+        .message-card img {width:80px;height:80px;}
+        h2 {font-size:1.05rem;}
+        p {font-size:0.95rem;}
+      }
+      @media (max-width: 600px) {
+        .message-card {padding:0.4rem 0.1rem;}
+        .message-card img {width:56px;height:56px;}
+        h2 {font-size:0.95rem;}
+        p {font-size:0.9rem;}
+      }
+    </style>
   </section>
 
 
   <section class="gallery">
-    <h2>Product Gallery</h2>
+  <h2 style="font-size:1.2rem;margin-bottom:0.7rem;">Product Gallery</h2>
     <div class="gallery-slider" id="gallerySlider">
       <div class="gallery-track">
         <div class="gallery-card"><img src="images/gallery/img1.jpg" alt="Gallery 1"></div>
@@ -229,38 +320,79 @@
 
 
   <section class="certificates">
-    <h2>Our Certificates</h2>
-    <div class="cert-list">
-      <div class="cert-item">
-        <img src="images/certificates/BSTI.jpg" alt="BSTI">
-        <p>BSTI</p>
+  <h2 style="font-size:1.2rem;margin-bottom:0.7rem;">Our Certificates</h2>
+    <div class="cert-list" style="display:flex;justify-content:center;;gap:1.5rem;flex-wrap:wrap;">
+      <div class="cert-item" style="width:110px;height:140px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
+        <img src="images/certificates/BSTI.jpeg" alt="BSTI" style="width:90px;height:90px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.08);object-fit:cover;">
+        <p style="font-size:0.95rem;margin-top:0.5rem;">BSTI</p>
       </div>
-      <div class="cert-item">
-        <img src="images/certificates/Flame.png" alt="Flame Retardant Tested">
-        <p>Flame Retardant Tested</p>
+      <div class="cert-item" style="width:110px;height:140px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
+        <img src="images/certificates/flame.jpg" alt="Flame Retardant" style="width:90px;height:90px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.08);object-fit:cover;">
+        <p style="font-size:0.95rem;margin-top:0.5rem;">Flame Retard</p>
+      </div>
+      <div class="cert-item" style="width:110px;height:140px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
+        <img src="images/certificates/buet.jpg" alt="BUET" style="width:90px;height:90px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.08);object-fit:cover;">
+        <p style="font-size:0.95rem;margin-top:0.5rem;">BUET</p>
+      </div>
+      <div class="cert-item" style="width:110px;height:140px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
+        <img src="images/certificates/iso.jpg" alt="ISO" style="width:90px;height:90px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.08);object-fit:cover;">
+        <p style="font-size:0.95rem;margin-top:0.5rem;">ISO 9000:2015</p>
+      </div>
+      <div class="cert-item" style="width:110px;height:140px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
+        <img src="images/certificates/mist.jpg" alt="MIST" style="width:90px;height:90px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.08);object-fit:cover;">
+        <p style="font-size:0.95rem;margin-top:0.5rem;">MIST</p>
       </div>
     </div>
+    <style>
+      @media (max-width: 900px) {
+        .cert-list {gap:1rem;}
+        .cert-item {width:70px;height:90px;}
+        .cert-item img {width:50px;height:50px;}
+        .cert-item p {font-size:0.9rem;}
+      }
+      @media (max-width: 600px) {
+        .cert-list {flex-direction:column;gap:0.5rem;align-items:center;}
+        .cert-item {width:48px;height:60px;}
+        .cert-item img {width:32px;height:32px;}
+        .cert-item p {font-size:0.85rem;}
+      }
+    </style>
   </section>
 
   
 
   <footer>
-  <div class="footer-content">
-    <div class="footer-logo"><img src="images/logo.jpg" alt="RK Cables Logo" style="height:150px;vertical-align:middle;margin-right:12px;"></div>
-    <div class="footer-info">
-  <p><strong>Head Office:</strong> 105/106, Sahi Electric Market, BCC road, Nawabpur, Dhaka, Bangladesh.</p>
-  <p><strong>Email:</strong> rkcablesbd@gmail.com</p>
-  <p><strong>Phone:</strong> 01821727272</p>
+  <div class="footer-content" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem;padding:1.2rem 0.5rem;">
+    <div class="footer-logo" style="flex:1 1 120px;min-width:80px;text-align:center;"><img src="images/logo.jpg" alt="RK Cables Logo" style="height:110px;vertical-align:middle;margin-right:12px;"></div>
+    <div class="footer-info" style="flex:2 1 220px;min-width:120px;text-align:left;">
+  <p style="margin:0.2rem 0;"><strong>Head Office:</strong> 105/106, Sahi Electric Market, BCC road, Nawabpur, Dhaka, Bangladesh.</p>
+  <p style="margin:0.2rem 0;"><strong>Email:</strong> rkcablesbd@gmail.com</p>
+  <p style="margin:0.2rem 0;"><strong>Phone:</strong> 01821727272</p>
     </div>
-    <div class="footer-social">
-  <a href="https://www.facebook.com/share/19kjwQkx47/" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"/></a>
-      <a href="#" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"/></a>
-      <a href="#" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"/></a>
+    <div class="footer-social" style="flex:1 1 120px;min-width:80px;text-align:center;display:flex;gap:0.7rem;justify-content:center;align-items:center;">
+  <a href="https://www.facebook.com/share/19kjwQkx47/" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width:32px;height:32px;"></a>
+      <a href="#" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" style="width:32px;height:32px;"></a>
+      <a href="#" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width:32px;height:32px;"></a>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="footer-bottom" style="text-align:center;padding:0.5rem 0;font-size:0.95rem;">
     <p>RK Cables &copy; 2025 | All Rights Reserved</p>
   </div>
+  <style>
+    @media (max-width: 900px) {
+      .footer-content {gap:1rem;padding:0.7rem 0.2rem;}
+      .footer-logo img {height:70px;}
+      .footer-social img {width:24px;height:24px;}
+      .footer-info {font-size:0.95rem;}
+    }
+    @media (max-width: 600px) {
+      .footer-content {flex-direction:column;gap:0.5rem;padding:0.4rem 0.1rem;}
+      .footer-logo img {height:40px;}
+      .footer-social img {width:18px;height:18px;}
+      .footer-info {font-size:0.9rem;text-align:center;}
+      .footer-bottom {font-size:0.85rem;}
+    }
+  </style>
 </footer>
 
   </div>
