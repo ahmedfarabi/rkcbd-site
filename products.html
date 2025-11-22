@@ -68,37 +68,241 @@
   }
   </script>
 
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
   <style>
-    body {background: linear-gradient(135deg, #f8fafc 0%, #fbeaea 100%);min-height: 100vh;}
-    .main-content {max-width: 1200px;margin: 0 auto;padding: 0 1rem;}
-    section {background: #fff;border-radius: 18px;box-shadow: 0 4px 24px rgba(0,0,0,0.07);margin-bottom: 2.5rem;padding: 2.5rem 2rem;transition: box-shadow 0.2s;}
-    section:hover {box-shadow: 0 8px 32px rgba(0,0,0,0.12);}
-    h1, h2, h3 {font-family: 'Montserrat', Arial, sans-serif;font-weight: 700;letter-spacing: 1px;}
-    h1 {font-size: 2.8rem;color: #b80000;margin-bottom: 0.5rem;}
-    h2 {font-size: 2rem;color: #222;margin-bottom: 1.2rem;border-left: 6px solid #b80000;padding-left: 0.7rem;}
-    h3 {font-size: 1.3rem;color: #b80000;margin-bottom: 0.7rem;}
-    .products-list, .grid, .cert-list {gap: 2rem;}
-    nav ul {display: flex;gap: 1.5rem;padding: 0;margin: 0;list-style: none;}
-    nav li {position: relative;display: flex;align-items: center;font-size: 1.08rem;font-weight: 500;color: #222;transition: color 0.2s;}
-    nav a {color: #222;text-decoration: none;display: flex;align-items: center;gap: 0.5rem;padding: 0.3rem 0.7rem;border-radius: 6px;transition: background 0.2s, color 0.2s;position: relative;overflow: hidden;}
-    nav a:hover, nav a.active {background: #b80000;color: #fff;}
-    nav a::before {content: "";position: absolute;left: 0;bottom: 0;width: 100%;height: 3px;background: linear-gradient(90deg, #b80000 60%, #222 100%);transform: scaleX(0);transition: transform 0.3s cubic-bezier(.4,0,.2,1);}
-    nav a:hover::before, nav a.active::before {transform: scaleX(1);}
-    nav a .menu-icon {font-size: 1.2em;vertical-align: middle;transition: transform 0.2s;}
-    nav a:hover .menu-icon {transform: scale(1.2) rotate(-10deg);}
-    .footer-content {border-radius: 0 0 18px 18px;box-shadow: 0 -2px 12px rgba(0,0,0,0.04);}
-    .footer-logo {color: #b80000;}
-    @media (max-width: 900px) {
-      .main-content, section {padding: 1rem;}
-      .header-main .logo span {font-size:1.1rem !important;}
-      .menu-toggle {display:block !important;}
+    body {
+      background: linear-gradient(135deg, #f8fafc 0%, #fbeaea 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
-      @media (min-width: 901px) {
-        .main-nav {display:flex !important;}
-        .menu-toggle {display:none !important;}
-        nav.sidebar {display:none !important;}
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s;
+    }
+    section:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #b80000;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 1.2rem;
+      border-left: 6px solid #b80000;
+      padding-left: 0.7rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      color: #b80000;
+      margin-bottom: 0.7rem;
+    }
+    .products-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 4rem;
+      margin-top: 1.5rem;
+    }
+    .product-item {
+      background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .product-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(184,0,0,0.2);
+    }
+    .product-item h3 {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      min-height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-item p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0.5rem 0 1rem 0;
+      line-height: 1.4;
+      flex-grow: 1;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    nav li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: #222;
+      transition: color 0.2s;
+    }
+    nav a {
+      color: #222;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    nav a:hover, nav a.active {
+      background: #b80000;
+      color: #fff;
+    }
+    nav a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #b80000 60%, #222 100%);
+      transform: scaleX(0);
+      transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    nav a:hover::before, nav a.active::before {
+      transform: scaleX(1);
+    }
+    nav a .menu-icon {
+      font-size: 1.2em;
+      vertical-align: middle;
+      transition: transform 0.2s;
+      color: #b80000;
+    }
+    nav a:hover .menu-icon {
+      transform: scale(1.1);
+      color: #fff;
+    }
+    header {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    footer {
+      background: #fff;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-logo, .footer-info, .footer-social {
+      flex: 1;
+      min-width: 200px;
+    }
+    .footer-info p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .footer-social img {
+      width: 32px;
+      height: 32px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e0e0e0;
+    }
+    @media (max-width: 900px) {
+      .header-main .logo span {
+        font-size: 1.1rem !important;
       }
-      @media (max-width: 600px) {h1 {font-size: 2rem;}h2 {font-size: 1.3rem;}.cover-content {padding: 0.7rem 0.7rem;}section {padding: 1rem 0.5rem;}}
+      .menu-toggle {
+        display: block !important;
+      }
+      .main-nav {
+        display: none !important;
+      }
+      nav.sidebar {
+        display: block !important;
+      }
+      .products-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+      section {
+        padding: 1.5rem 1rem;
+      }
+    }
+    @media (min-width: 901px) {
+      .main-nav {
+        display: flex !important;
+      }
+      .menu-toggle {
+        display: none !important;
+      }
+      nav.sidebar {
+        display: none !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .products-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .product-item {
+        padding: 1rem;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      section {
+        padding: 1rem 0.7rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
