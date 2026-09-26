@@ -214,44 +214,6 @@
       padding: 1rem 1.5rem;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
-    footer {
-      background: #fff;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
-    }
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-around;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .footer-logo, .footer-info, .footer-social {
-      flex: 1;
-      min-width: 200px;
-    }
-    .footer-info p {
-      margin: 0.5rem 0;
-      font-size: 0.95rem;
-    }
-    .footer-social {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .footer-social img {
-      width: 32px;
-      height: 32px;
-    }
-    .footer-bottom {
-      text-align: center;
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid #e0e0e0;
-    }
     @media (max-width: 900px) {
       .header-main .logo span {
         font-size: 1.1rem !important;
@@ -291,10 +253,6 @@
       }
       .product-item {
         padding: 1rem;
-      }
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
       }
       section {
         padding: 1rem 0.7rem;
@@ -624,26 +582,29 @@
       }
     </script>
   </div>
-  
-<footer>
-  <div class="footer-content">
-    <div class="footer-logo"><img src="images/logo.jpg" alt="RK Cables Logo" style="height:150px;vertical-align:middle;margin-right:12px;"></div>
-    <div class="footer-info">
-  <p><strong>Head Office:</strong> 105/106, Sahi Electric Market, BCC road, Nawabpur, Dhaka, Bangladesh.</p>
-  <p><strong>Email:</strong> rkcablesbd@gmail.com</p>
-  <p><strong>Phone:</strong> +88 01733 612151, +88 01738 010933</p>
-  <p><strong>Hotline:</strong> +88 01821 727272</p>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.jpg" alt="RK Cables Logo">
+      </div>
+      <div class="footer-info">
+        <p><strong>Head Office:</strong> 105/106, Sahi Electric Market, BCC road, Nawabpur, Dhaka, Bangladesh.</p>
+        <p><strong>Email:</strong> <a href="mailto:rkcablesbd@gmail.com">rkcablesbd@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+8801733612151">+88 01733 612151</a>, <a href="tel:+8801738010933">+88 01738 010933</a></p>
+        <p><strong>Hotline:</strong> <a href="tel:+8801821727272">+88 01821 727272</a></p>
+      </div>
+      <div class="footer-social-wrap">
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/19kjwQkx47/" target="_blank" rel="noopener noreferrer" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="#" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
+          <a href="#" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        </div>
+      </div>
     </div>
-    <div class="footer-social">
-  <a href="https://www.facebook.com/share/19kjwQkx47/" title="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"/></a>
-      <a href="#" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"/></a>
-      <a href="#" title="Twitter"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"/></a>
+    <div class="footer-bottom">
+      <p>RK Cables &copy; 2025 | All Rights Reserved</p>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>RK Cables &copy; 2025 | All Rights Reserved</p>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
